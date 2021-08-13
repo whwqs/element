@@ -1,2 +1,2 @@
-git push origin develop
+git push origin dev
 pause

@@ -9,11 +9,12 @@
 </head>
 <body>
     <div id="app">        
+        <input type="button" @click="ev=>m1(ev)" value="修改值" />
         <div style="position: relative;left:0px;top:0;">
             <div @contextmenu="ev=>{showMenu(ev,index)}"
                 style="margin: 10px;width: 100px;height: 100px;background: red;" v-for="(n, index) in 2"
                 :key="n">
-                <el-contextmenu :data="contextMenuData" :index="transferIndex"
+                <el-contextmenu :pobj="contextMenuData" 
                     @Handler1="Handler_A(index)" @Handler2="Handler_B(index)" @Handler3="Handler_C(index)"
                     @Handler4="Handler_D(index)" @Handler5="Handler_E(index)"></el-contextmenu>
             </div>
@@ -27,11 +28,9 @@
             return {
                 transferIndex: null, // Show the menu that was clicked
                 contextMenuData: {
-                    menuName: 'demo1',
-                    axis: {
-                        x: null,
-                        y: null
-                    },
+                    name: 'demo1',
+                    show: true,
+                    targetev: {},
                     menulists: [
                         {
                             btnName: "选项1",
@@ -102,6 +101,10 @@
             },
             Handler_E(index) {
                 console.log('index:', index, '选项2-1绑定事件执行');
+            },
+            m1(ev) {
+                this.contextMenuData.show = !this.contextMenuData.show;
+                this.contextMenuData.targetev=ev;
             }
         }
 
