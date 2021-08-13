@@ -1,0 +1,146 @@
+.float-status-1 {
+	left: 100%;
+	bottom: -1px;
+	z-index: 10001;
+}
+.float-status-2 {
+	left: 100%;
+	top: -1px;
+	z-index: 10001;
+}
+.float-status-3 {
+	right: 100%;
+	top: -1px;
+	z-index: 10001;
+}
+.float-status-4 {
+	right: 100%;
+	bottom: -1px;
+	z-index: 10001;
+}
+.child-ul-wrapper {
+	.has-child {
+		padding: 5px 10px;
+		position: relative;
+	}
+	background: #ffffff;
+	position: absolute;
+	display: none;
+	border: 1px solid #e8e8e8;
+	border-radius: 3px;
+}
+li {
+	list-style: none;
+}
+.parent-name {
+	.icon {
+		position: absolute;
+		display: block;
+		top: 4px;
+		right: 0;
+		border-top: 4px solid transparent;
+		border-left: 8px solid #111111;
+		border-bottom: 4px solid transparent;
+		border-right: 4px solid transparent;
+	}
+}
+.no-child-btn {
+	padding: 5px 10px;
+}
+.child-li-wrapper {
+	&:hover {
+		>.has-child {
+			>.child-ul-wrapper {
+				display: block;
+			}
+		}
+		background: #2894f8;
+	}
+}
+.context-menu-list {
+	&:hover {
+		background: #2894f8;
+	}
+}
+.nav-icon-fontawe {
+	position: absolute;
+}
+.nav-name-right {
+	white-space: nowrap;
+	display: block;
+	margin: auto 20px;
+}
+.btn-wrapper-simple {
+	position: relative;
+	height: 16px;
+	line-height: 16px;
+}
+.vue-contextmenu-listWrapper {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	background: #ffffff;
+	top: 0;
+	left: 0;
+	border-radius: 2px;
+	box-shadow: 0 2px 2px 0 #cccccc;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 12px;
+	.context-menu-list {
+		position: relative;
+		background: #ffffff;
+		text-decoration: none;
+		list-style: none;
+		margin: 3px 0;
+	}
+}
+.context-menu-list {
+	&:hover {
+		background: #2894f8;
+		>.has-child {
+			>.child-ul-wrapper {
+				display: block;
+			}
+		}
+	}
+	.has-child {
+		position: relative;
+		cursor: pointer;
+		padding: 5px 10px;
+	}
+}
+.parent-name {
+	.icon {
+		position: absolute;
+		display: block;
+		top: 4px;
+		right: 0;
+		border-top: 4px solid transparent;
+		border-left: 8px solid #111111;
+		border-bottom: 4px solid transparent;
+		border-right: 4px solid transparent;
+	}
+}
+.no-child-btn {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.nav-icon-fontawe {
+	position: absolute;
+	left: 0;
+}
+.nav-name-right {
+	margin: 0 20px;
+	height: 16px;
+	line-height: 16px;
+	display: block;
+}
+.no-allow {
+	color: #d3cfcf;
+	cursor: not-allowed;
+}
+.btn-wrapper-simple {
+	position: relative;
+	height: 16px;
+	line-height: 16px;
+}
